@@ -1,12 +1,33 @@
 import React from 'react';
 import { Mail, Phone, MessageCircle, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const { t } = useTranslation();
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "MyFirstJob",
+      "telephone": "+40712345678",
+      "email": "hello@myfirstjob.ro",
+      "url": "https://myfirstjob.ro"
+    }
+  };
+
   return (
     <div className="py-20 px-4 bg-light min-h-screen flex items-center">
+      <SEO
+        title="Contact Us - Hire a Teen in Brasov"
+        description="Get in touch to hire a trusted teen for babysitting, dog walking, or tutoring in Brasov. Contact us via email, phone, or WhatsApp."
+        keywords={["contact myfirstjob", "hire teen brasov", "babysitter contact brasov"]}
+        canonicalUrl="/contact"
+        schema={contactSchema}
+      />
+
       <div className="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <div>
