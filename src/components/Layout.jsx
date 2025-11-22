@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart, Calculator } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, Heart, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Layout = ({ children }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
+    const { t, i18n } = useTranslation();
+
+    const toggleLanguage = () => {
+        const newLang = i18n.language === 'ro' ? 'en' : 'ro';
+        i18n.changeLanguage(newLang);
+    };
 
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
-        { name: 'Value Calculator', path: '/calculator' },
-        { name: 'Join the Squad', path: '/join' },
-        { name: 'About Us', path: '/about' },
+        { name: t('nav.home'), path: '/' },
+        { name: t('nav.services'), path: '/services' },
+        { name: t('nav.calculator'), path: '/calculator' },
+        { name: t('nav.join'), path: '/join' },
+        { name: t('nav.about'), path: '/about' },
     ];
 
     return (
@@ -37,11 +43,20 @@ const Layout = ({ children }) => {
                                     {link.name}
                                 </Link>
                             ))}
+
+                            <button
+                                onClick={toggleLanguage}
+                                className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:text-primary transition-colors"
+                            >
+                                <Globe className="w-4 h-4" />
+                                {i18n.language.toUpperCase()}
+                            </button>
+
                             <Link
                                 to="/contact"
                                 className="bg-primary text-white px-5 py-2 rounded-full font-bold hover:bg-red-500 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                             >
-                                Book Now
+                                {t('nav.book')}
                             </Link>
                         </div>
 
@@ -69,12 +84,22 @@ const Layout = ({ children }) => {
                                     {link.name}
                                 </Link>
                             ))}
+                            <button
+                                onClick={() => {
+                                    toggleLanguage();
+                                    setIsMenuOpen(false);
+                                }}
+                                className="flex items-center gap-2 px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full"
+                            >
+                                <Globe className="w-4 h-4" />
+                                Switch to {i18n.language === 'ro' ? 'English' : 'Română'}
+                            </button>
                             <Link
                                 to="/contact"
                                 className="block w-full text-center mt-4 bg-primary text-white px-5 py-3 rounded-xl font-bold"
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Book Now
+                                {t('nav.book')}
                             </Link>
                         </div>
                     </div>
@@ -94,17 +119,16 @@ const Layout = ({ children }) => {
                                 MyFirstJob
                             </h3>
                             <p className="text-gray-400">
-                                Connecting awesome teens with families who need a hand.
-                                Trustworthy, energetic, and ready to help!
+                                {t('hero.subtitle')}
                             </p>
                         </div>
                         <div>
-                            <h4 className="font-bold text-lg mb-4">Services</h4>
+                            <h4 className="font-bold text-lg mb-4">{t('nav.services')}</h4>
                             <ul className="space-y-2 text-gray-400">
-                                <li>Babysitting</li>
-                                <li>Tutoring</li>
-                                <li>Dog Walking</li>
-                                <li>City Errands</li>
+                                <li>{t('services.babysitting.title')}</li>
+                                <li>{t('services.tutoring.title')}</li>
+                                <li>{t('services.dogwalking.title')}</li>
+                                <li>{t('services.errands.title')}</li>
                             </ul>
                         </div>
                         <div>

@@ -1,0 +1,60 @@
+{
+    "nav": {
+        "home": "Acasă",
+        "services": "Servicii",
+        "calculator": "Calculator Valoare",
+        "join": "Hai în Echipă",
+        "about": "Despre Noi",
+        "book": "Rezervă Acum"
+    },
+    "hero": {
+        "badge": "🚀 Cea mai tare echipă de adolescenți din Brașov",
+        "title_1": "Ai nevoie de o mână de ajutor?",
+        "title_2": "Suntem aici.",
+        "subtitle": "Babysitting, meditații și ajutor prin casă de la adolescenți de încredere care chiar vor să muncească.",
+        "cta_calc": "Calculează Valoarea",
+        "cta_explore": "Vezi Serviciile",
+        "verified": "Elevi Verificați",
+        "approved": "Aprobat de Părinți"
+    },
+    "services_section": {
+        "title": "Ce putem face pentru tine",
+        "subtitle": "Suntem tineri, energici și gata să ajutăm. Iată câteva moduri în care îți putem face viața mai ușoară."
+    },
+    "team_section": {
+        "title": "Cunoaște Echipa",
+        "subtitle": "Adolescenți reali, abilități reale, ajutor real.",
+        "view_all": "Vezi toate profilurile",
+        "friend_title": "Prietenul tău aici?",
+        "friend_desc": "Căutăm mereu oameni faini să ni se alăture.",
+        "join_btn": "Hai în Echipă"
+    },
+    "services": {
+        "babysitting": {
+            "title": "Babysitting",
+            "desc": "Distracție și siguranță. Nu ne uităm doar la TV; ne jucăm, facem lucru manual și îi ținem fericiți."
+        },
+        "tutoring": {
+            "title": "Meditații",
+            "desc": "Mate, Română sau Engleza? Facem învățatul mai puțin plictisitor și ajutăm cu temele."
+        },
+        "dogwalking": {
+            "title": "Plimbat Câini",
+            "desc": "Ploaie sau soare, cățelul trebuie să iasă. Iubim câinii și ne asigurăm că fac mișcare."
+        },
+        "errands": {
+            "title": "Treburile Orașului",
+            "desc": "Cumpărături, ridicat pachete? Cunoaștem Brașovul ca în palmă și te ajutăm să economisești timp."
+        }
+    },
+    "teens": {
+        "ioana": {
+            "role": "Babysitter & Meditator",
+            "bio": "Elevă de liceu pasionată de matematică și copii. Știu toate jocurile tari de la locul de joacă!"
+        },
+        "soso": {
+            "role": "Iubitor de Animale & Ajutor",
+            "bio": "Am 3 câini acasă și îmi place să fiu activ. Pot ajuta și cu cumpărăturile!"
+        }
+    }
+}

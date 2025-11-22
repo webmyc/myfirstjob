@@ -1,0 +1,60 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "calculator": "Value Calculator",
+        "join": "Join the Squad",
+        "about": "About Us",
+        "book": "Book Now"
+    },
+    "hero": {
+        "badge": "🚀 Brașov's Coolest Teen Squad",
+        "title_1": "Need a hand?",
+        "title_2": "We got you.",
+        "subtitle": "Babysitting, tutoring, and help around the house from trustworthy teens who actually want to work.",
+        "cta_calc": "Calculate Value",
+        "cta_explore": "Explore Services",
+        "verified": "Verified Students",
+        "approved": "Parent Approved"
+    },
+    "services_section": {
+        "title": "What we can do for you",
+        "subtitle": "We are young, energetic, and ready to help. Here are some of the ways we can make your life easier."
+    },
+    "team_section": {
+        "title": "Meet the Squad",
+        "subtitle": "Real teens, real skills, real helpful.",
+        "view_all": "View all profiles",
+        "friend_title": "Your Friend Here?",
+        "friend_desc": "We are always looking for cool people to join us.",
+        "join_btn": "Join the Squad"
+    },
+    "services": {
+        "babysitting": {
+            "title": "Babysitting",
+            "desc": "Fun, safe, and reliable care. We don't just watch TV; we play games, do crafts, and keep them happy."
+        },
+        "tutoring": {
+            "title": "Tutoring",
+            "desc": "Math, English, or Science? We make learning less boring and help with homework struggles."
+        },
+        "dogwalking": {
+            "title": "Dog Walking",
+            "desc": "Rain or shine, your dog needs to pee. We love long walks and playing fetch."
+        },
+        "errands": {
+            "title": "City Errands",
+            "desc": "Need groceries? A package picked up? We know Brașov inside out and can help you save time."
+        }
+    },
+    "teens": {
+        "ioana": {
+            "role": "Babysitter & Tutor",
+            "bio": "High school student with a passion for math and kids. I know all the best playground games!"
+        },
+        "soso": {
+            "role": "Pet Lover & Helper",
+            "bio": "I have 3 dogs at home and love being active. I can also help with grocery runs!"
+        }
+    }
+}
