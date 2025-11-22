@@ -71,6 +71,10 @@
         "soso": {
             "role": "Iubitor de Animale & Ajutor",
             "bio": "Am 3 câini acasă și îmi place să fiu activ. Pot ajuta și cu cumpărăturile!"
+        },
+        "maria": {
+            "role": "Organizator & Creativ",
+            "bio": "Îmi place să fac ordine și să decorez. Pot ajuta la organizarea petrecerilor sau a camerei tale!"
         }
     },
     "calculator": {

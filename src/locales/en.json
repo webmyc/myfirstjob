@@ -71,6 +71,10 @@
         "soso": {
             "role": "Pet Lover & Helper",
             "bio": "I have 3 dogs at home and love being active. I can also help with grocery runs!"
+        },
+        "maria": {
+            "role": "Organizer & Creative",
+            "bio": "I love organizing and decorating. I can help organize parties or your room!"
         }
     },
     "calculator": {

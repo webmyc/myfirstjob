@@ -6,7 +6,7 @@ const About = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="bg-white">
             {/* Hero */}
             <div className="bg-primary/5 py-20 px-4">
                 <div className="max-w-4xl mx-auto text-center">

@@ -55,6 +55,14 @@ const Home = () => {
       skills: ['Dogs', 'Shopping', 'Organization'],
       rating: 5,
       image: 'https://images.unsplash.com/photo-1517677130688-e037ed02a664?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      name: 'Maria',
+      role: t('teens.maria.role'),
+      bio: t('teens.maria.bio'),
+      skills: ['Organization', 'Decor', 'Events'],
+      rating: 5,
+      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
     }
   ];
 
