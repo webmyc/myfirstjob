@@ -45,6 +45,22 @@
         "errands": {
             "title": "City Errands",
             "desc": "Need groceries? A package picked up? We know Brașov inside out and can help you save time."
+        },
+        "tech": {
+            "title": "Tech Support",
+            "desc": "Grandma needs help with WhatsApp? Printer acting up? We speak fluent technology."
+        },
+        "music": {
+            "title": "Music Practice",
+            "desc": "Need a practice buddy for piano or guitar? We can help keep the rhythm."
+        },
+        "homework": {
+            "title": "Homework Help",
+            "desc": "Not full tutoring, just someone to sit and make sure the homework actually gets done."
+        },
+        "courier": {
+            "title": "Bike Courier",
+            "desc": "Need something moved across Brașov fast? We have bikes and strong legs."
         }
     },
     "teens": {
@@ -55,6 +71,70 @@
         "soso": {
             "role": "Pet Lover & Helper",
             "bio": "I have 3 dogs at home and love being active. I can also help with grocery runs!"
+        }
+    },
+    "calculator": {
+        "title": "Value Calculator",
+        "subtitle": "Calculate the price of your freedom.",
+        "question_service": "What do you need?",
+        "question_hours": "How long do you need us? ({{hours}} hours)",
+        "question_stress": "Current Stress Level (Be honest!)",
+        "quick_fix": "Quick fix (1h)",
+        "full_escape": "Full escape (8h)",
+        "investment": "Your Investment",
+        "book_btn": "Book This Value Package",
+        "results": {
+            "pizza": "Less than a pizza date!",
+            "therapy": "Cheaper than therapy!",
+            "sanity": "Small price for sanity."
+        }
+    },
+    "join": {
+        "title": "Join the Squad",
+        "subtitle": "Want to earn your own money? Good at something? Join Brașov's coolest teen workforce.",
+        "form": {
+            "name": "Name",
+            "age": "Age",
+            "skills": "What are you good at?",
+            "superpower": "Your Superpower",
+            "send": "Send Application"
+        }
+    },
+    "contact": {
+        "title": "Let's Get Started",
+        "subtitle": "Tell us what you need, and we'll tell you how we can help.",
+        "quick_contact": "Quick Contact",
+        "promise": "✨ Promise",
+        "promise_text": "We reply within 24 hours. Usually faster because we are always on our phones anyway.",
+        "form": {
+            "parent_name": "Parent's Name",
+            "phone": "Phone Number",
+            "help_type": "What do you need help with?",
+            "value_goal": "The \"Value\" Goal",
+            "value_hint": "What is the main result you want? (e.g., \"A quiet dinner\", \"Passing the math test\")",
+            "send": "Send Request"
+        }
+    },
+    "about": {
+        "title": "We are MyFirstJob.",
+        "subtitle": "A group of ambitious teens in Brașov who believe that age is just a number when it comes to responsibility.",
+        "values": {
+            "heart": {
+                "title": "Heart & Hustle",
+                "desc": "We do this because we want to learn, earn, and help. We bring energy that adults sometimes... lack. (Sorry!)"
+            },
+            "trust": {
+                "title": "Trust First",
+                "desc": "We are verified students. We have references. We know that letting someone into your home is a big deal."
+            },
+            "fair": {
+                "title": "Fair Value",
+                "desc": "We don't want charity. We want to provide real value for fair pay. We take our jobs seriously."
+            }
+        },
+        "story": {
+            "title": "Our Story",
+            "text": "It started with two friends who wanted to buy their own concert tickets. We realized that many families in Brașov need help with small things, and many teens want to work but don't know how to start. So we built this. A place where good families meet good teens."
         }
     }
 }

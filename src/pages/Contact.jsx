@@ -1,14 +1,17 @@
 import React from 'react';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">Let's Get Started</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">{t('contact.title')}</h1>
           <p className="text-xl text-gray-600">
-            Tell us what you need, and we'll tell you how we can help.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -16,7 +19,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="md:col-span-1 space-y-6">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-lg mb-4">Quick Contact</h3>
+              <h3 className="font-bold text-lg mb-4">{t('contact.quick_contact')}</h3>
               <div className="space-y-4">
                 <a href="mailto:hello@myfirstjob.ro" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors">
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
@@ -40,9 +43,9 @@ const Contact = () => {
             </div>
 
             <div className="bg-accent/20 p-6 rounded-2xl border border-accent/50">
-              <h3 className="font-bold text-lg mb-2">✨ Promise</h3>
+              <h3 className="font-bold text-lg mb-2">{t('contact.promise')}</h3>
               <p className="text-sm text-gray-700">
-                We reply within 24 hours. Usually faster because we are always on our phones anyway.
+                {t('contact.promise_text')}
               </p>
             </div>
           </div>
@@ -52,34 +55,34 @@ const Contact = () => {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">Parent's Name</label>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.parent_name')}</label>
                   <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="John Doe" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.phone')}</label>
                   <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="07xx xxx xxx" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">What do you need help with?</label>
+                <label className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.help_type')}</label>
                 <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white">
-                  <option>Babysitting (Save my evening)</option>
-                  <option>Tutoring (Save their grades)</option>
-                  <option>Dog Walking (Save my rug)</option>
-                  <option>Errands (Save my time)</option>
+                  <option>{t('services.babysitting.title')}</option>
+                  <option>{t('services.tutoring.title')}</option>
+                  <option>{t('services.dogwalking.title')}</option>
+                  <option>{t('services.errands.title')}</option>
                   <option>Other</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">The "Value" Goal</label>
-                <p className="text-xs text-gray-400 mb-2">What is the main result you want? (e.g., "A quiet dinner", "Passing the math test")</p>
-                <textarea className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all h-32" placeholder="I just want to eat a meal while it's still hot..."></textarea>
+                <label className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.value_goal')}</label>
+                <p className="text-xs text-gray-400 mb-2">{t('contact.form.value_hint')}</p>
+                <textarea className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all h-32" placeholder="..."></textarea>
               </div>
 
               <button type="button" className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-red-500 transition-colors shadow-lg transform hover:-translate-y-1">
-                Send Request
+                {t('contact.form.send')}
               </button>
             </form>
           </div>

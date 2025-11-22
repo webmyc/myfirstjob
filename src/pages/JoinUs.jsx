@@ -1,15 +1,17 @@
 import React from 'react';
 import { Send } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const JoinUs = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="min-h-screen bg-white py-12 px-4">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">Join the Squad</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">{t('join.title')}</h1>
                     <p className="text-xl text-gray-600">
-                        Want to earn your own money? Good at something?
-                        Join Brașov's coolest teen workforce.
+                        {t('join.subtitle')}
                     </p>
                 </div>
 
@@ -17,34 +19,34 @@ const JoinUs = () => {
                     <form className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">Name</label>
+                                <label className="block text-sm font-bold text-gray-700 mb-2">{t('join.form.name')}</label>
                                 <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Your Name" />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">Age</label>
+                                <label className="block text-sm font-bold text-gray-700 mb-2">{t('join.form.age')}</label>
                                 <input type="number" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="16" />
                             </div>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">What are you good at?</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2">{t('join.form.skills')}</label>
                             <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white">
-                                <option>Babysitting</option>
-                                <option>Tutoring</option>
-                                <option>Pet Care</option>
-                                <option>Tech Support</option>
-                                <option>Other (Surprise us!)</option>
+                                <option>{t('services.babysitting.title')}</option>
+                                <option>{t('services.tutoring.title')}</option>
+                                <option>{t('services.dogwalking.title')}</option>
+                                <option>{t('services.tech.title')}</option>
+                                <option>Other</option>
                             </select>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">Your Superpower</label>
-                            <textarea className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all h-32" placeholder="I can bake cookies, I speak French, I'm great with dogs..."></textarea>
+                            <label className="block text-sm font-bold text-gray-700 mb-2">{t('join.form.superpower')}</label>
+                            <textarea className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all h-32" placeholder="..."></textarea>
                         </div>
 
                         <button type="button" className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-red-500 transition-colors shadow-lg flex items-center justify-center gap-2">
                             <Send className="w-5 h-5" />
-                            Send Application
+                            {t('join.form.send')}
                         </button>
                     </form>
                 </div>

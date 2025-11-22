@@ -1,61 +1,64 @@
 import React from 'react';
 import { Smile, Zap, Dog, ShoppingBag, Monitor, Music, PenTool, Bike } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+    const { t } = useTranslation();
+
     const services = [
         {
-            title: 'Babysitting',
-            description: 'We keep your kids safe and entertained. No screens (unless you say so!), lots of games, and bedtime stories included.',
+            title: t('services.babysitting.title'),
+            description: t('services.babysitting.desc'),
             icon: Smile,
             color: 'bg-primary',
             link: '/contact'
         },
         {
-            title: 'Tutoring',
-            description: 'Struggling with Math or English? We can explain it in a way that actually makes sense. Grades go up, stress goes down.',
+            title: t('services.tutoring.title'),
+            description: t('services.tutoring.desc'),
             icon: Zap,
             color: 'bg-secondary',
             link: '/contact'
         },
         {
-            title: 'Dog Walking',
-            description: 'Rain or shine, your dog needs to pee. We love long walks and playing fetch.',
+            title: t('services.dogwalking.title'),
+            description: t('services.dogwalking.desc'),
             icon: Dog,
             color: 'bg-accent',
             link: '/contact'
         },
         {
-            title: 'City Errands',
-            description: 'Grocery shopping, picking up packages, or waiting for the plumber. We save you time.',
+            title: t('services.errands.title'),
+            description: t('services.errands.desc'),
             icon: ShoppingBag,
             color: 'bg-purple-500',
             link: '/contact'
         },
         {
-            title: 'Tech Support',
-            description: 'Grandma needs help with WhatsApp? Printer acting up? We speak fluent technology.',
+            title: t('services.tech.title'),
+            description: t('services.tech.desc'),
             icon: Monitor,
             color: 'bg-blue-500',
             link: '/contact'
         },
         {
-            title: 'Music Practice',
-            description: 'Need a practice buddy for piano or guitar? We can help keep the rhythm.',
+            title: t('services.music.title'),
+            description: t('services.music.desc'),
             icon: Music,
             color: 'bg-pink-500',
             link: '/contact'
         },
         {
-            title: 'Homework Help',
-            description: 'Not full tutoring, just someone to sit and make sure the homework actually gets done.',
+            title: t('services.homework.title'),
+            description: t('services.homework.desc'),
             icon: PenTool,
             color: 'bg-orange-500',
             link: '/contact'
         },
         {
-            title: 'Bike Courier',
-            description: 'Need something moved across Brașov fast? We have bikes and strong legs.',
+            title: t('services.courier.title'),
+            description: t('services.courier.desc'),
             icon: Bike,
             color: 'bg-green-500',
             link: '/contact'
@@ -66,10 +69,9 @@ const Services = () => {
         <div className="min-h-screen bg-gray-50 py-12 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">Our Services</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">{t('services_section.title')}</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        From homework to housework, we're here to help.
-                        If you don't see what you need, just ask!
+                        {t('services_section.subtitle')}
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

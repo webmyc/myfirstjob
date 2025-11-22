@@ -45,6 +45,22 @@
         "errands": {
             "title": "Treburile Orașului",
             "desc": "Cumpărături, ridicat pachete? Cunoaștem Brașovul ca în palmă și te ajutăm să economisești timp."
+        },
+        "tech": {
+            "title": "Suport Tehnic",
+            "desc": "Bunica are nevoie de ajutor cu WhatsApp? Imprimanta face figuri? Vorbim fluent tehnologia."
+        },
+        "music": {
+            "title": "Repetiții Muzică",
+            "desc": "Ai nevoie de un partener de repetiții la pian sau chitară? Te ajutăm să ții ritmul."
+        },
+        "homework": {
+            "title": "Ajutor la Teme",
+            "desc": "Nu meditații complete, doar cineva care să stea și să se asigure că temele sunt făcute."
+        },
+        "courier": {
+            "title": "Curier pe Bicicletă",
+            "desc": "Trebuie să muți ceva rapid prin Brașov? Avem biciclete și picioare puternice."
         }
     },
     "teens": {
@@ -55,6 +71,70 @@
         "soso": {
             "role": "Iubitor de Animale & Ajutor",
             "bio": "Am 3 câini acasă și îmi place să fiu activ. Pot ajuta și cu cumpărăturile!"
+        }
+    },
+    "calculator": {
+        "title": "Calculator Valoare",
+        "subtitle": "Calculează prețul libertății tale.",
+        "question_service": "De ce ai nevoie?",
+        "question_hours": "Cât timp ai nevoie de noi? ({{hours}} ore)",
+        "question_stress": "Nivelul Actual de Stres (Fii sincer!)",
+        "quick_fix": "Reparație rapidă (1h)",
+        "full_escape": "Evadare totală (8h)",
+        "investment": "Investiția Ta",
+        "book_btn": "Rezervă Acest Pachet",
+        "results": {
+            "pizza": "Mai puțin decât o ieșire la pizza!",
+            "therapy": "Mai ieftin decât terapia!",
+            "sanity": "Un preț mic pentru sănătatea mintală."
+        }
+    },
+    "join": {
+        "title": "Hai în Echipă",
+        "subtitle": "Vrei să câștigi proprii tăi bani? Ești bun la ceva? Alătură-te celei mai tari echipe de adolescenți din Brașov.",
+        "form": {
+            "name": "Nume",
+            "age": "Vârstă",
+            "skills": "La ce te pricepi?",
+            "superpower": "Superputerea Ta",
+            "send": "Trimite Aplicația"
+        }
+    },
+    "contact": {
+        "title": "Hai să Începem",
+        "subtitle": "Spune-ne de ce ai nevoie și îți spunem cum te putem ajuta.",
+        "quick_contact": "Contact Rapid",
+        "promise": "✨ Promisiune",
+        "promise_text": "Răspundem în 24 de ore. De obicei mai repede pentru că stăm oricum pe telefon.",
+        "form": {
+            "parent_name": "Nume Părinte",
+            "phone": "Număr Telefon",
+            "help_type": "Cu ce te ajutăm?",
+            "value_goal": "Obiectivul de \"Valoare\"",
+            "value_hint": "Care este rezultatul principal pe care îl dorești? (ex: \"O cină liniștită\", \"Să treacă testul la mate\")",
+            "send": "Trimite Cererea"
+        }
+    },
+    "about": {
+        "title": "Noi suntem MyFirstJob.",
+        "subtitle": "Un grup de adolescenți ambițioși din Brașov care cred că vârsta e doar un număr când vine vorba de responsabilitate.",
+        "values": {
+            "heart": {
+                "title": "Inimă & Muncă",
+                "desc": "Facem asta pentru că vrem să învățăm, să câștigăm și să ajutăm. Aducem energia pe care adulții uneori... nu o mai au. (Scuze!)"
+            },
+            "trust": {
+                "title": "Încredere Înainte",
+                "desc": "Suntem elevi verificați. Avem referințe. Știm că să lași pe cineva în casa ta e mare lucru."
+            },
+            "fair": {
+                "title": "Valoare Corectă",
+                "desc": "Nu vrem pomană. Vrem să oferim valoare reală pentru o plată corectă. Ne luăm joburile în serios."
+            }
+        },
+        "story": {
+            "title": "Povestea Noastră",
+            "text": "A început cu doi prieteni care voiau să-și cumpere propriile bilete la concert. Am realizat că multe familii din Brașov au nevoie de ajutor cu lucruri mici, și mulți adolescenți vor să muncească dar nu știu cum să înceapă. Așa că am construit asta. Un loc unde familiile bune întâlnesc adolescenți buni."
         }
     }
 }
