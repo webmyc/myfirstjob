@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Heart, Globe, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -15,9 +16,34 @@ const Layout = ({ children }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Get current language from URL
+    const getCurrentLang = () => {
+        return location.pathname.startsWith('/en') ? 'en' : 'ro';
+    };
+
+    // Create language-aware path
+    const createPath = (path) => {
+        const currentLang = getCurrentLang();
+        const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+        return currentLang === 'en' ? `/en/${cleanPath}` : `/${cleanPath}`;
+    };
+
+    // Toggle language and navigate to same page in new language
     const toggleLanguage = () => {
-        const newLang = i18n.language === 'ro' ? 'en' : 'ro';
-        i18n.changeLanguage(newLang);
+        const currentLang = getCurrentLang();
+        const newLang = currentLang === 'ro' ? 'en' : 'ro';
+
+        // Get current path without language prefix
+        let currentPath = location.pathname;
+        if (currentPath.startsWith('/en/')) {
+            currentPath = currentPath.slice(3); // Remove '/en'
+        } else if (currentPath.startsWith('/en')) {
+            currentPath = '/'; // Home page
+        }
+
+        // Navigate to same page in new language
+        const newPath = newLang === 'en' ? `/en${currentPath}` : currentPath;
+        navigate(newPath);
     };
 
     const navLinks = [
@@ -28,12 +54,19 @@ const Layout = ({ children }) => {
         { name: t('nav.about'), path: '/about' },
     ];
 
+    // Check if current path matches link (accounting for language prefix)
+    const isActive = (linkPath) => {
+        const currentPath = location.pathname;
+        const langAwarePath = createPath(linkPath);
+        return currentPath === langAwarePath;
+    };
+
     return (
         <div className="min-h-screen flex flex-col bg-light">
             <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm py-2' : 'bg-transparent py-4'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center">
-                        <Link to="/" className="flex items-center gap-2 text-2xl font-display font-bold text-dark group">
+                        <Link to={createPath('/')} className="flex items-center gap-2 text-2xl font-display font-bold text-dark group">
                             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform duration-300 shadow-glow">
                                 <Heart className="w-6 h-6 fill-current" />
                             </div>
@@ -45,11 +78,11 @@ const Layout = ({ children }) => {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.path}
-                                    to={link.path}
-                                    className={`text-sm font-bold transition-all duration-300 relative group ${location.pathname === link.path ? 'text-primary' : 'text-gray-500 hover:text-dark'}`}
+                                    to={createPath(link.path)}
+                                    className={`text-sm font-bold transition-all duration-300 relative group ${isActive(link.path) ? 'text-primary' : 'text-gray-500 hover:text-dark'}`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                                    <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${isActive(link.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                                 </Link>
                             ))}
 
@@ -60,11 +93,11 @@ const Layout = ({ children }) => {
                                 className="flex items-center gap-1 text-sm font-bold text-gray-500 hover:text-primary transition-colors"
                             >
                                 <Globe className="w-4 h-4" />
-                                {i18n.language.toUpperCase()}
+                                {getCurrentLang().toUpperCase()}
                             </button>
 
                             <Link
-                                to="/contact"
+                                to={createPath('/contact')}
                                 className="btn-primary py-2 px-6 text-sm"
                             >
                                 {t('nav.book')}
@@ -88,8 +121,8 @@ const Layout = ({ children }) => {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.path}
-                                    to={link.path}
-                                    className={`block px-4 py-3 rounded-xl text-base font-bold ${location.pathname === link.path ? 'bg-primary/10 text-primary' : 'text-gray-600 hover:bg-gray-50'}`}
+                                    to={createPath(link.path)}
+                                    className={`block px-4 py-3 rounded-xl text-base font-bold ${isActive(link.path) ? 'bg-primary/10 text-primary' : 'text-gray-600 hover:bg-gray-50'}`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {link.name}
@@ -103,10 +136,10 @@ const Layout = ({ children }) => {
                                 className="flex items-center gap-2 px-4 py-3 text-base font-bold text-gray-600 hover:bg-gray-50 w-full rounded-xl"
                             >
                                 <Globe className="w-5 h-5" />
-                                Switch to {i18n.language === 'ro' ? 'English' : 'Română'}
+                                Switch to {getCurrentLang() === 'ro' ? 'English' : 'Română'}
                             </button>
                             <Link
-                                to="/contact"
+                                to={createPath('/contact')}
                                 className="block w-full text-center mt-4 btn-primary"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -139,9 +172,9 @@ const Layout = ({ children }) => {
                         <div>
                             <h4 className="font-bold text-xl mb-6 text-white">{t('nav.services')}</h4>
                             <ul className="space-y-4 text-gray-400">
-                                <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.babysitting.title')}</Link></li>
-                                <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.tutoring.title')}</Link></li>
-                                <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.dogwalking.title')}</Link></li>
+                                <li><Link to={createPath('/services')} className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.babysitting.title')}</Link></li>
+                                <li><Link to={createPath('/services')} className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.tutoring.title')}</Link></li>
+                                <li><Link to={createPath('/services')} className="hover:text-primary transition-colors flex items-center gap-2"><ArrowRight className="w-4 h-4" /> {t('services.dogwalking.title')}</Link></li>
                             </ul>
                         </div>
                         <div>
@@ -149,7 +182,7 @@ const Layout = ({ children }) => {
                             <ul className="space-y-4 text-gray-400">
                                 <li>Brașov, Romania</li>
                                 <li><a href="mailto:hello@myfirstjob.ro" className="hover:text-primary transition-colors">hello@myfirstjob.ro</a></li>
-                                <li><Link to="/join" className="text-primary font-bold hover:text-white transition-colors">{t('nav.join')}</Link></li>
+                                <li><Link to={createPath('/join')} className="text-primary font-bold hover:text-white transition-colors">{t('nav.join')}</Link></li>
                             </ul>
                         </div>
                     </div>

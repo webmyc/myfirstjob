@@ -1,39 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://myfirstjob.ro/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://myfirstjob.ro/services</loc>
+    <loc>https://myfirstjob.ro/#/en</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/services</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/services" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://myfirstjob.ro/calculator</loc>
+    <loc>https://myfirstjob.ro/#/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/services" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/calculator</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/calculator" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/calculator" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myfirstjob.ro/contact</loc>
+    <loc>https://myfirstjob.ro/#/en/calculator</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/calculator" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/calculator" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/contact" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://myfirstjob.ro/join</loc>
+    <loc>https://myfirstjob.ro/#/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/contact" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://myfirstjob.ro/about</loc>
+    <loc>https://myfirstjob.ro/#/join</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/join" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/join" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/en/join</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/join" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/join" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/about</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/about" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://myfirstjob.ro/#/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://myfirstjob.ro/#/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://myfirstjob.ro/#/en/about" />
     <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>
+
