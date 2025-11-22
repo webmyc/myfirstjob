@@ -54,7 +54,7 @@ const Home = () => {
       bio: t('teens.soso.bio'),
       skills: ['Dogs', 'Shopping', 'Organization'],
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1517677130688-e037ed02a664?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
     },
     {
       name: 'Maria',
