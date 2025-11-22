@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smile, Zap, Dog, ShoppingBag, Monitor, Music, PenTool, Bike } from 'lucide-react';
+import { Smile, Zap, Dog, ShoppingBag, Monitor, Music, BookOpen, Bike } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { useTranslation } from 'react-i18next';
 
@@ -52,25 +52,26 @@ const Services = () => {
         {
             title: t('services.homework.title'),
             description: t('services.homework.desc'),
-            icon: PenTool,
-            color: 'bg-orange-500',
+            icon: BookOpen,
+            color: 'bg-green-500',
             link: '/contact'
         },
         {
             title: t('services.courier.title'),
             description: t('services.courier.desc'),
             icon: Bike,
-            color: 'bg-green-500',
+            color: 'bg-orange-500',
             link: '/contact'
         }
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">{t('services_section.title')}</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <div className="py-20 bg-white min-h-screen">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="text-center mb-20 relative">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                    <h1 className="text-5xl font-bold mb-6 text-dark">{t('services_section.title')}</h1>
+                    <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
                         {t('services_section.subtitle')}
                     </p>
                 </div>
