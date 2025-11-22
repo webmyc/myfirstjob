@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useParams, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -11,16 +11,20 @@ import Contact from './pages/Contact';
 
 // Wrapper component to handle language detection from URL
 function LanguageWrapper({ children }) {
-  const { lang } = useParams();
+  const location = useLocation();
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Set language based on URL parameter
-    const currentLang = lang || 'ro';
-    if (i18n.language !== currentLang) {
-      i18n.changeLanguage(currentLang);
+    // Detect language from URL path
+    const isEnglish = location.pathname.startsWith('/en');
+    const targetLang = isEnglish ? 'en' : 'ro';
+
+    // Only change if different to avoid unnecessary re-renders
+    if (i18n.language !== targetLang) {
+      console.log(`Changing language from ${i18n.language} to ${targetLang}`);
+      i18n.changeLanguage(targetLang);
     }
-  }, [lang, i18n]);
+  }, [location.pathname, i18n]);
 
   return children;
 }
@@ -28,23 +32,27 @@ function LanguageWrapper({ children }) {
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Romanian routes (no prefix) */}
-        <Route path="/" element={<LanguageWrapper><Layout><Home /></Layout></LanguageWrapper>} />
-        <Route path="/services" element={<LanguageWrapper><Layout><Services /></Layout></LanguageWrapper>} />
-        <Route path="/calculator" element={<LanguageWrapper><Layout><CalculatorPage /></Layout></LanguageWrapper>} />
-        <Route path="/join" element={<LanguageWrapper><Layout><JoinUs /></Layout></LanguageWrapper>} />
-        <Route path="/about" element={<LanguageWrapper><Layout><About /></Layout></LanguageWrapper>} />
-        <Route path="/contact" element={<LanguageWrapper><Layout><Contact /></Layout></LanguageWrapper>} />
+      <LanguageWrapper>
+        <Layout>
+          <Routes>
+            {/* Romanian routes (no prefix) */}
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/calculator" element={<CalculatorPage />} />
+            <Route path="/join" element={<JoinUs />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-        {/* English routes (with /en prefix) */}
-        <Route path="/en" element={<LanguageWrapper><Layout><Home /></Layout></LanguageWrapper>} />
-        <Route path="/en/services" element={<LanguageWrapper><Layout><Services /></Layout></LanguageWrapper>} />
-        <Route path="/en/calculator" element={<LanguageWrapper><Layout><CalculatorPage /></Layout></LanguageWrapper>} />
-        <Route path="/en/join" element={<LanguageWrapper><Layout><JoinUs /></Layout></LanguageWrapper>} />
-        <Route path="/en/about" element={<LanguageWrapper><Layout><About /></Layout></LanguageWrapper>} />
-        <Route path="/en/contact" element={<LanguageWrapper><Layout><Contact /></Layout></LanguageWrapper>} />
-      </Routes>
+            {/* English routes (with /en prefix) */}
+            <Route path="/en" element={<Home />} />
+            <Route path="/en/services" element={<Services />} />
+            <Route path="/en/calculator" element={<CalculatorPage />} />
+            <Route path="/en/join" element={<JoinUs />} />
+            <Route path="/en/about" element={<About />} />
+            <Route path="/en/contact" element={<Contact />} />
+          </Routes>
+        </Layout>
+      </LanguageWrapper>
     </Router>
   );
 }

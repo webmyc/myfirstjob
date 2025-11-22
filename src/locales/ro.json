@@ -12,10 +12,32 @@
         "title": "Ai nevoie de o mână de ajutor?",
         "highlight": "Suntem aici.",
         "subtitle": "Babysitting, meditații și ajutor prin casă de la adolescenți de încredere care chiar vor să muncească.",
+        "cta_primary": "Rezervă Acum",
+        "cta_secondary": "Hai în Echipă",
         "cta_calc": "Calculează Valoarea",
         "cta_explore": "Vezi Serviciile",
         "verified": "Elevi Verificați",
         "approved": "Aprobat de Părinți"
+    },
+    "features": {
+        "title": "De ce să ne alegi?",
+        "subtitle": "Aducem energie, responsabilitate și o perspectivă proaspătă la fiecare job.",
+        "safe": {
+            "title": "100% Sigur",
+            "desc": "Toți adolescenții noștri sunt elevi verificați cu referințe. Siguranța ta este prioritatea noastră."
+        },
+        "community": {
+            "title": "Comunitate Întâi",
+            "desc": "Suntem adolescenți locali care ajută familii locale. Construim încredere, un job odată."
+        },
+        "local": {
+            "title": "Cunoaștem Brașovul",
+            "desc": "Știm fiecare cartier, fiecare scurtătură. Rapizi, eficienți și mereu la timp."
+        }
+    },
+    "team": {
+        "title": "Cunoaște Echipa",
+        "subtitle": "Adolescenți reali, abilități reale, ajutor real."
     },
     "services_section": {
         "title": "Ce putem face pentru tine",

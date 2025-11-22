@@ -12,10 +12,32 @@
         "title": "Need a hand?",
         "highlight": "We got you.",
         "subtitle": "Babysitting, tutoring, and help around the house from trustworthy teens who actually want to work.",
+        "cta_primary": "Book Now",
+        "cta_secondary": "Join the Squad",
         "cta_calc": "Calculate Value",
         "cta_explore": "Explore Services",
         "verified": "Verified Students",
         "approved": "Parent Approved"
+    },
+    "features": {
+        "title": "Why Choose Us?",
+        "subtitle": "We bring energy, reliability, and a fresh perspective to every job.",
+        "safe": {
+            "title": "100% Safe",
+            "desc": "All our teens are verified students with references. Your safety is our priority."
+        },
+        "community": {
+            "title": "Community First",
+            "desc": "We're local teens helping local families. Building trust, one job at a time."
+        },
+        "local": {
+            "title": "Know Brașov",
+            "desc": "We know every neighborhood, every shortcut. Fast, efficient, and always on time."
+        }
+    },
+    "team": {
+        "title": "Meet the Squad",
+        "subtitle": "Real teens, real skills, real helpful."
     },
     "services_section": {
         "title": "What we can do for you",
