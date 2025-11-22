@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
                                 className="flex items-center gap-1 text-sm font-bold text-gray-500 hover:text-primary transition-colors"
                             >
                                 <Globe className="w-4 h-4" />
-                                {getCurrentLang().toUpperCase()}
+                                {getCurrentLang() === 'ro' ? 'EN' : 'RO'}
                             </button>
 
                             <Link
@@ -136,7 +136,7 @@ const Layout = ({ children }) => {
                                 className="flex items-center gap-2 px-4 py-3 text-base font-bold text-gray-600 hover:bg-gray-50 w-full rounded-xl"
                             >
                                 <Globe className="w-5 h-5" />
-                                Switch to {getCurrentLang() === 'ro' ? 'English' : 'Română'}
+                                {getCurrentLang() === 'ro' ? 'English' : 'Română'}
                             </button>
                             <Link
                                 to={createPath('/contact')}
