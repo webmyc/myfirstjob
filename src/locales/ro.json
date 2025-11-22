@@ -9,8 +9,8 @@
     },
     "hero": {
         "badge": "🚀 Cea mai tare echipă de adolescenți din Brașov",
-        "title_1": "Ai nevoie de o mână de ajutor?",
-        "title_2": "Suntem aici.",
+        "title": "Ai nevoie de o mână de ajutor?",
+        "highlight": "Suntem aici.",
         "subtitle": "Babysitting, meditații și ajutor prin casă de la adolescenți de încredere care chiar vor să muncească.",
         "cta_calc": "Calculează Valoarea",
         "cta_explore": "Vezi Serviciile",

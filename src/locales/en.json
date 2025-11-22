@@ -9,8 +9,8 @@
     },
     "hero": {
         "badge": "🚀 Brașov's Coolest Teen Squad",
-        "title_1": "Need a hand?",
-        "title_2": "We got you.",
+        "title": "Need a hand?",
+        "highlight": "We got you.",
         "subtitle": "Babysitting, tutoring, and help around the house from trustworthy teens who actually want to work.",
         "cta_calc": "Calculate Value",
         "cta_explore": "Explore Services",
